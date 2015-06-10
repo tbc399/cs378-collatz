@@ -1,9 +1,9 @@
 FILES :=                              \
     .travis.yml                       \
-    collatz-tests/EID-RunCollatz.in   \
-    collatz-tests/EID-RunCollatz.out  \
-    collatz-tests/EID-TestCollatz.c++ \
-    collatz-tests/EID-TestCollatz.out \
+    ../collatz-tests/tbc399-RunCollatz.in   \
+    ../collatz-tests/tbc399-RunCollatz.out  \
+    ../collatz-tests/tbc399-TestCollatz.c++ \
+    ../collatz-tests/tbc399-TestCollatz.out \
     Collatz.c++                       \
     Collatz.h                         \
     Collatz.log                       \
@@ -77,3 +77,9 @@ TestCollatz.out: TestCollatz
 	$(GCOV) -b Collatz.c++     >> TestCollatz.out
 	$(GCOV) -b TestCollatz.c++ >> TestCollatz.out
 	cat TestCollatz.out
+
+sphere: SphereCollatz
+	./SphereCollatz
+
+SphereCollatz: SphereCollatz.c++
+	$(CXX) $(CXXFLAGS) SphereCollatz.c++ -o SphereCollatz
