@@ -34,8 +34,36 @@ pair<int, int> collatz_read (const string& s) {
 // ------------
 
 int collatz_eval (int i, int j) {
-    // <your code>
-    return 1;}
+    assert(i <= j);
+    int max = 1;
+    int len;
+    for (int k = i; k <= j; ++k) {
+        len = collatz_cyclen(k);
+        if (len > max)
+            max = len;
+    }
+    assert(max > 0);
+    return max;
+}
+
+// --------------
+// collatz_cyclen
+// --------------
+
+int collatz_cyclen (int i) {
+    assert(i > 0);
+    int len = 1;
+    while (i != 1) {
+        ++len;
+        if (i % 2 == 0) { // i is even
+            i /= 2;
+        } else {
+            i = i * 3 + 1;
+        }
+        assert(i > 0);
+    }
+    return len;
+}
 
 // -------------
 // collatz_print

@@ -77,6 +77,25 @@ TEST(CollatzFixture, eval_4) {
     const int v = collatz_eval(900, 1000);
     ASSERT_EQ(174, v);}
 
+// ------
+// cyclen
+// ------
+
+TEST (CollatzFixture, cyclen_1) {
+    const int i = collatz_cyclen(1);
+    ASSERT_EQ(1, i);
+}
+
+TEST (CollatzFixture, cyclen_2) {
+    const int i = collatz_cyclen(5);
+    ASSERT_EQ(6, i);
+}
+
+TEST (CollatzFixture, cyclen_3) {
+    const int i = collatz_cyclen(10);
+    ASSERT_EQ(7, i);
+}
+
 // -----
 // print
 // -----
