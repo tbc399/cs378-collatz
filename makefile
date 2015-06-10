@@ -83,3 +83,9 @@ sphere: SphereCollatz
 
 SphereCollatz: SphereCollatz.c++
 	$(CXX) $(CXXFLAGS) SphereCollatz.c++ -o SphereCollatz
+	
+input: gen_input
+	./gen_input
+	
+gen_input: gen_input.c++ Collatz.h Collatz.c++
+	$(CXX) $(CXXFLAGS) gen_input.c++ -o gen_input
