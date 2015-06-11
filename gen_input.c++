@@ -61,7 +61,7 @@ pair<int, int> gen_pair () {
 
 int main () {
     //cout << INT_MAX <<"\n";
-    int count = 100;
+    int count = 1000;
     while (count > 0) {
         pair<int, int> p = gen_pair();
         if (count == 25)
