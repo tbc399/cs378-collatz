@@ -57,6 +57,7 @@ TEST(CollatzFixture, read_4) {
     ASSERT_EQ(-9, p.second);
 }
 
+#ifndef CACHE
 // ----
 // eval
 // ----
@@ -76,6 +77,32 @@ TEST(CollatzFixture, eval_3) {
 TEST(CollatzFixture, eval_4) {
     const int v = collatz_eval(900, 1000);
     ASSERT_EQ(174, v);}
+
+#else
+// -----------
+// eval_cached
+// -----------
+
+TEST(CollatzFixture, eval_cached_1) {
+    vector<int> cache;
+    const int v = collatz_eval_cached(1, 10, cache);
+    ASSERT_EQ(20, v);}
+
+TEST(CollatzFixture, eval_cached_2) {
+    vector<int> cache;
+    const int v = collatz_eval_cached(100, 200, cache);
+    ASSERT_EQ(125, v);}
+
+TEST(CollatzFixture, eval_cached_3) {
+    vector<int> cache;
+    const int v = collatz_eval_cached(201, 210, cache);
+    ASSERT_EQ(89, v);}
+
+TEST(CollatzFixture, eval_cached_4) {
+    vector<int> cache;
+    const int v = collatz_eval_cached(900, 1000, cache);
+    ASSERT_EQ(174, v);}
+#endif
 
 // ------
 // cyclen

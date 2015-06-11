@@ -14,6 +14,7 @@
 #include <iostream> // istream, ostream
 #include <string>   // string
 #include <utility>  // pair
+#include <vector>   // vector
 
 using namespace std;
 
@@ -38,6 +39,21 @@ pair<int, int> collatz_read (const string& s);
  * @return the max cycle length of the range [i, j]
  */
 int collatz_eval (int i, int j);
+
+#ifdef CACHE
+// -------------------
+// collatz_eval_cached
+// -------------------
+
+/**
+ * @param i the beginning of the range, inclusive
+ * @param j the end       of the range, inclusive
+ * @param cache a vector with value as the cycle length of
+ * it's index
+ * @return the max cycle length of the range [i, j]
+ */
+int collatz_eval_cached (int i, int j, vector<int>& cache);
+#endif
 
 // --------------
 // collatz_cyclen

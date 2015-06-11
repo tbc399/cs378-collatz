@@ -21,6 +21,7 @@
 #include <sstream>  // istringstream
 #include <string>   // getline, string
 #include <utility>  // make_pair, pair
+#include <vector>
 
 using namespace std;
 
@@ -44,7 +45,7 @@ pair<int, int> collatz_read (const string& s);
  * @param j the end       of the range, inclusive
  * @return the max cycle length of the range [i, j]
  */
-int collatz_eval (int i, int j);
+int collatz_eval_cached (int i, int j, vector<int>& cache);
 
 // --------------
 // collatz_cyclen
@@ -91,11 +92,13 @@ pair<int, int> collatz_read (const string& s) {
     sin >> i >> j;
     return make_pair(i, j);}
 
-// ------------
-// collatz_eval
-// ------------
+// -------------------
+// collatz_eval_cached
+// -------------------
 
-int collatz_eval (int i, int j) {
+int collatz_eval_cached (int i, int j, vector<int>& cache) {
+    assert(i > 0);
+    assert(j > 0);
     int begin = 1;
     int end = 1;
     if (i < j) {
@@ -105,11 +108,17 @@ int collatz_eval (int i, int j) {
     	begin = j;
     	end = i;
     }
-    //assert(i <= j);
     int max = 1;
     int len;
     for (int k = begin; k <= end; ++k) {
-        len = collatz_cyclen(k);
+        if (k < (int)(cache.size()) && cache[k]) {
+            len = cache[k];
+        } else if (k < (int)(cache.size()) && cache[k] == 0) {
+            cache[k] = len = collatz_cyclen(k);
+        } else {
+            cache.resize(k+1);
+            cache[k] = len = collatz_cyclen(k);
+        }
         if (len > max)
             max = len;
     }
@@ -153,7 +162,8 @@ void collatz_solve (istream& r, ostream& w) {
         const pair<int, int> p = collatz_read(s);
         const int            i = p.first;
         const int            j = p.second;
-        const int            v = collatz_eval(i, j);
+        vector<int> cache;
+        const int            v = collatz_eval_cached(i, j, cache);
         collatz_print(w, i, j, v);}}
 
 // -------------------------------
