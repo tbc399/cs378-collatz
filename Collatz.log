@@ -1,3 +1,22 @@
+commit bf889b43c32969d979cf063959415676136618da
+Merge: 30d7a58 56b0dbb
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Fri Jun 12 09:45:14 2015 -0500
+
+    fixed merge issue with TestCollatz.out
+
+commit 56b0dbb6659c2911de5fea6a42afb2f88c629ff0
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Fri Jun 12 09:40:35 2015 -0500
+
+    moved the CACHE feature tag to remove the regular eval function when the cache is in use
+
+commit 30d7a5895138b69c49e5c7f9ee80f3d2b862dfa9
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Fri Jun 12 09:32:44 2015 -0500
+
+    updated the commit log
+
 commit 4597c0f8d115033abb3ce7a1330cedbcd514f48f
 Author: Travis Cammack <cammack@utexas.edu>
 Date:   Fri Jun 12 09:31:46 2015 -0500
