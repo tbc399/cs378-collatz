@@ -1,3 +1,28 @@
+commit 4597c0f8d115033abb3ce7a1330cedbcd514f48f
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Fri Jun 12 09:31:46 2015 -0500
+
+    reran the tests
+
+commit c03ab5c632c54f84614c24d89bb7616421ca2bf3
+Merge: 9fb66de 4ffcff4
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Fri Jun 12 09:25:21 2015 -0500
+
+    Merge branch 'dev'
+
+commit 4ffcff4c9b7b41b439708a1fdefb08982b6f8041
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Fri Jun 12 09:20:37 2015 -0500
+
+    fixed issues with cache not being used
+
+commit 9fb66de0dd9a506fb0de49f6a5fd00be72e1ef7c
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Thu Jun 11 14:38:43 2015 -0500
+
+    added the log file
+
 commit bafcdc6aba2c0c507d1cca51867b825373c2579a
 Author: Travis Cammack <cammack@utexas.edu>
 Date:   Thu Jun 11 14:35:47 2015 -0500
