@@ -24,6 +24,7 @@ else
 endif
 
 CXXFLAGS := -pedantic -std=c++11 -Wall -DCACHE
+#CXXFLAGS := -pedantic -std=c++11 -Wall
 LDFLAGS  := -lgtest -lgtest_main -pthread
 VALGRIND := valgrind
 
