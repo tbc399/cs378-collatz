@@ -158,13 +158,15 @@ void collatz_print (ostream& w, int i, int j, int v) {
 
 void collatz_solve (istream& r, ostream& w) {
     string s;
+    vector<int> cache;
     while (getline(r, s)) {
         const pair<int, int> p = collatz_read(s);
         const int            i = p.first;
         const int            j = p.second;
-        vector<int> cache;
         const int            v = collatz_eval_cached(i, j, cache);
-        collatz_print(w, i, j, v);}}
+        collatz_print(w, i, j, v);
+    }
+}
 
 // -------------------------------
 // projects/collatz/RunCollatz.c++

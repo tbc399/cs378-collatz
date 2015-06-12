@@ -125,13 +125,15 @@ void collatz_print (ostream& w, int i, int j, int v) {
 
 void collatz_solve (istream& r, ostream& w) {
     string s;
+    #ifdef CACHE
+    vector<int> cache;
+    #endif
     while (getline(r, s)) {
         const pair<int, int> p = collatz_read(s);
         const int            i = p.first;
         const int            j = p.second;
         int v;
         #ifdef CACHE
-        vector<int> cache;
         v = collatz_eval_cached(i, j, cache);
         #else
         v = collatz_eval(i, j);
