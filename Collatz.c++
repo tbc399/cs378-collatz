@@ -30,6 +30,7 @@ pair<int, int> collatz_read (const string& s) {
     sin >> i >> j;
     return make_pair(i, j);}
 
+#ifndef CACHE
 // ------------
 // collatz_eval
 // ------------
@@ -57,7 +58,7 @@ int collatz_eval (int i, int j) {
     return max;
 }
 
-#ifdef CACHE
+#else
 // -------------------
 // collatz_eval_cached
 // -------------------
