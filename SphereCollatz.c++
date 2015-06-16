@@ -8,6 +8,8 @@
 // defines
 // -------
 
+#define CACHE
+
 #ifdef ONLINE_JUDGE
     #define NDEBUG
 #endif
@@ -92,6 +94,35 @@ pair<int, int> collatz_read (const string& s) {
     sin >> i >> j;
     return make_pair(i, j);}
 
+#ifndef CACHE
+// ------------
+// collatz_eval
+// ------------
+
+int collatz_eval (int i, int j) {
+    assert(i > 0);
+    assert(j > 0);
+    int begin = 1;
+    int end = 1;
+    if (i < j) {
+    	begin = i;
+    	end = j;
+    } else {
+    	begin = j;
+    	end = i;
+    }
+    int max = 1;
+    int len;
+    for (int k = begin; k <= end; ++k) {
+        len = collatz_cyclen(k);
+        if (len > max)
+            max = len;
+    }
+    assert(max > 0);
+    return max;
+}
+
+#else
 // -------------------
 // collatz_eval_cached
 // -------------------
@@ -125,6 +156,7 @@ int collatz_eval_cached (int i, int j, vector<int>& cache) {
     assert(max > 0);
     return max;
 }
+#endif
 
 // --------------
 // collatz_cyclen
@@ -158,12 +190,19 @@ void collatz_print (ostream& w, int i, int j, int v) {
 
 void collatz_solve (istream& r, ostream& w) {
     string s;
+    #ifdef CACHE
     vector<int> cache;
+    #endif
     while (getline(r, s)) {
         const pair<int, int> p = collatz_read(s);
         const int            i = p.first;
         const int            j = p.second;
-        const int            v = collatz_eval_cached(i, j, cache);
+        int v;
+        #ifdef CACHE
+                             v = collatz_eval_cached(i, j, cache);
+        #else
+                             v = collatz_eval(i, j);
+        #endif
         collatz_print(w, i, j, v);
     }
 }
