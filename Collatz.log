@@ -1,3 +1,22 @@
+commit d166da9ee4538dcd2020299e127004f2ea9b73b3
+Merge: 9b2ebfa c594778
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Tue Jun 16 00:01:09 2015 -0500
+
+    fixed merge conflict
+
+commit c594778e070cb3d87864ead09fbb8780764841a4
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Mon Jun 15 23:52:12 2015 -0500
+
+    updated commit log
+
+commit f70c5375758fca13f96c072149f0932f82235bcd
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Mon Jun 15 23:48:50 2015 -0500
+
+    added the CACHE feature tag to the SphereCollatz.c++ file
+
 commit 9b2ebfa9c4b3f209b8cd5ed7fcb86ab088732b63
 Author: Travis Cammack <cammack@utexas.edu>
 Date:   Fri Jun 12 09:45:46 2015 -0500
