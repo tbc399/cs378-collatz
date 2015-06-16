@@ -1,0 +1,107 @@
+commit f70c5375758fca13f96c072149f0932f82235bcd
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Mon Jun 15 23:48:50 2015 -0500
+
+    added the CACHE feature tag to the SphereCollatz.c++ file
+
+commit 56b0dbb6659c2911de5fea6a42afb2f88c629ff0
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Fri Jun 12 09:40:35 2015 -0500
+
+    moved the CACHE feature tag to remove the regular eval function when the cache is in use
+
+commit 4ffcff4c9b7b41b439708a1fdefb08982b6f8041
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Fri Jun 12 09:20:37 2015 -0500
+
+    fixed issues with cache not being used
+
+commit bafcdc6aba2c0c507d1cca51867b825373c2579a
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Thu Jun 11 14:35:47 2015 -0500
+
+    made the documentation
+
+commit 24da1fd5ecbf0c425b86a93ae6b5a3fdb1e99332
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Thu Jun 11 14:28:53 2015 -0500
+
+    added 1000 tests to RunCollatz.in
+
+commit e47518aec2634d5bdab47f7df3ebf9d5c53efdb1
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Thu Jun 11 14:17:29 2015 -0500
+
+    changed gen_input to produce a 1000 tests
+
+commit f7ab72f157d8acf8438b94cd42a690e8b69f00ae
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Thu Jun 11 13:13:52 2015 -0500
+
+    implemented a simple cache
+
+commit 02813e410a51e2bf4c08fc7538a7dec766936413
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Thu Jun 11 11:34:13 2015 -0500
+
+    added script to generate test input
+
+commit a60313dca0ee59f1b3f98e30d8d648f21e409ca8
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Tue Jun 9 21:47:19 2015 -0500
+
+    added gen_input.c++ to generate valid acceptance tests
+
+commit 5562aaf6f3f48fc26e2243e3a36e2c360cca2f82
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Tue Jun 9 21:46:35 2015 -0500
+
+    added a target for generating input in the makefile
+
+commit 6a2b469c120bd2c4942e02146c9a7334836a6889
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Tue Jun 9 20:24:09 2015 -0500
+
+    created SphereCollataz for submission to SOJ
+
+commit 73cbb6a759d9b135136a29ffbd7eb9a69a6a6a1b
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Tue Jun 9 19:00:01 2015 -0500
+
+    simple implementation of collaz completed and working locally
+
+commit 9bc2707d4623c80a683dc4c2449fbcd7b70dbd71
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Tue Jun 9 18:13:32 2015 -0500
+
+    added extra tests
+
+commit ecc7fade55f6c71395869dd40b61ac0570ef3b75
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Tue Jun 9 17:40:23 2015 -0500
+
+    ran tests after correcting unit tests
+
+commit 9b6a93f735b3f23ae6b8f259cc642c3f619746e7
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Tue Jun 9 17:21:44 2015 -0500
+
+    fixed unit tests to correct expected values
+
+commit c59c06d409723b1e0521f1769974ba6de2f8830c
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Tue Jun 9 15:34:27 2015 -0500
+
+    downloaded source and ran tests as is and passed
+
+commit 675996ed25468f902426ff43c2471533a41006d2
+Author: Travis Cammack <cammack@utexas.edu>
+Date:   Tue Jun 9 14:11:37 2015 -0500
+
+    initial commit
+
+commit c571bf729e0f3cbec7d1319f54661828fcbde18c
+Author: tbc399 <cammack@utexas.edu>
+Date:   Tue Jun 9 14:05:38 2015 -0500
+
+    Initial commit
